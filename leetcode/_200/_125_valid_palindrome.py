@@ -1,14 +1,14 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        l, r = 0, len(s) - 1
+        left_pointer, right_pointer = 0, len(s) - 1
 
-        while l < r:
-            while l < r and not s[l].isalnum():
-                l += 1
-            while l < r and not s[r].isalnum():
-                r -= 1
-            if s[l].lower() != s[r].lower():
+        while left_pointer < right_pointer:
+            while left_pointer < right_pointer and not s[left_pointer].isalnum():
+                left_pointer += 1
+            while left_pointer < right_pointer and not s[right_pointer].isalnum():
+                right_pointer -= 1
+            if s[left_pointer].lower() != s[right_pointer].lower():
                 return False
-            s += 1
-            l -= 1
+            left_pointer += 1
+            right_pointer -= 1
         return True
