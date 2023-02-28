@@ -1,12 +1,8 @@
-class BST:
-    def __init__(self, value: int, left=None, right=None):
-        self.value = value
-        self.left = left
-        self.right = right
+from structures import BinaryTree
 
 
-def findClosestValueInBst(tree: BST, target: int) -> int:
-    def find_recursively(node: BST, closest):
+def findClosestValueInBst(tree: BinaryTree, target: int) -> int:
+    def find_recursively(node: BinaryTree, closest):
         if node is None:
             return closest
 
@@ -24,13 +20,13 @@ def findClosestValueInBst(tree: BST, target: int) -> int:
 
 
 if __name__ == '__main__':
-    tree = BST(10,
-               BST(5,
-                   BST(2, BST(1), None),
-                   BST(5)),
-               BST(15,
-                   BST(13, None, BST(14)),
-                   BST(22)
+    tree = BinaryTree(10,
+               BinaryTree(5,
+                   BinaryTree(2, BinaryTree(1), None),
+                   BinaryTree(5)),
+               BinaryTree(15,
+                   BinaryTree(13, None, BinaryTree(14)),
+                   BinaryTree(22)
                    )
                )
     print(findClosestValueInBst(tree, 12))
