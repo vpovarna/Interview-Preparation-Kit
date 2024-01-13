@@ -9,6 +9,7 @@ class Solution:
             self.twoSum(nums[i + 1:], -v, ans)
         return list(ans)
 
+
     def twoSum(self, nums, target, ans):
         visited = set()
         for n in nums:
