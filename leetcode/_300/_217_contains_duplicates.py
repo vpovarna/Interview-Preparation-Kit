@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def contains_duplicate(self, nums: List[int]) -> bool:
         visited = set()
         for n in nums:
             if n in visited:
@@ -10,4 +10,3 @@ class Solution:
             else:
                 visited.add(n)
         return False
-
