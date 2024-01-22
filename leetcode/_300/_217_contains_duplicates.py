@@ -7,6 +7,5 @@ class Solution:
         for n in nums:
             if n in visited:
                 return True
-            else:
-                visited.add(n)
+            visited.add(n)
         return False
