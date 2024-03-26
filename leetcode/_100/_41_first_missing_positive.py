@@ -25,7 +25,7 @@ class Solution:
             if nums[ind] > 0:
                 nums[ind] *= -1
             elif nums[ind] == 0:
-                nums[ind] = float('-inf')
+                nums[ind] = float('-inf') # assign to a value that will be out of bounds and will be skip
 
         for i in range(n):
             if nums[i] > 0:
