@@ -20,4 +20,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().numSubarrayProductLessThanK([10, 5, 1, 6], 100))
+    print(Solution().numSubarrayProductLessThanK([10, 5, 1, 1], 100))
